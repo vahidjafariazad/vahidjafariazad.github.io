@@ -1,47 +1,80 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>V A | Technical Notes</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>Vahid Azad | Technical Notes</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>V A</h1>
-    <div class="muted">
-      Independent technical notes in advanced structural modeling & retrofit methods,
-      engineering software development, and infrastructure material modeling.
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="name">Vahid Azad</div>
+      <div class="tag">Structural modeling • Software • Materials</div>
     </div>
-    <nav style="margin-top:10px;">
-      <a href="modeling.html">Modeling & Retrofit</a>
+    <nav class="menu">
+      <a class="active" href="index.html">Home</a>
+      <a href="modeling.html">Modeling</a>
       <a href="software.html">Software</a>
       <a href="materials.html">Materials</a>
       <a href="about.html">About</a>
     </nav>
-  </header>
-
-  <div class="card">
-    <h2>Focus</h2>
-    <ul>
-      <li><b>Advanced modeling & retrofit:</b> nonlinear behavior, load paths, sensitivity, conceptual studies.</li>
-      <li><b>Software development:</b> automation, model QA, interoperability, repeatable workflows.</li>
-      <li><b>Material modeling:</b> constitutive behavior concepts and numerical stability.</li>
-    </ul>
   </div>
+</header>
 
-  <div class="card">
-    <h2>Figures</h2>
-    <div class="muted">Add images under <code>assets/images/</code> and reference them here.</div>
-    <!-- Example once you add an image:
-    <p><img src="assets/images/example.png" alt="Conceptual example figure"></p>
-    -->
+<main>
+  <div class="container">
+    <section class="hero">
+      <h1>Independent Technical Notes</h1>
+      <p>
+        Advanced structural modeling and retrofit methodologies,
+        engineering software development, and infrastructure material modeling.
+      </p>
+      <div style="margin-top:10px">
+        <span class="badge">Engineering / Scientist Scheme</span>
+        <span class="badge">Figures Supported</span>
+        <span class="badge">Conflict-Safe</span>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Advanced Modeling & Retrofit</h2>
+        <p>Nonlinear behavior, load paths, sensitivity, conceptual retrofit strategies.</p>
+        <a href="modeling.html">Explore →</a>
+      </div>
+
+      <div class="card">
+        <h2>Software Development</h2>
+        <p>Automation, QA, parsers, converters, and reproducible workflows.</p>
+        <a href="software.html">Explore →</a>
+      </div>
+
+      <div class="card">
+        <h2>Infrastructure Materials</h2>
+        <p>Constitutive behavior, degradation concepts, numerical robustness.</p>
+        <a href="materials.html">Explore →</a>
+      </div>
+
+      <div class="card">
+        <h2>Figures & Notes</h2>
+        <p>Illustrative figures located in <code>assets/images/</code>.</p>
+      </div>
+    </div>
   </div>
+</main>
 
-  <footer>
-    Disclaimer: This is an independent technical site for discussion and exploratory work.
-    It does not offer engineering-of-record services, and nothing here is a substitute for
-    project-specific professional engineering judgment.
-  </footer>
+<footer>
+  <div class="container">
+    <div class="badge">Independent technical site</div>
+    <p>
+      Disclaimer: This site documents exploratory technical work only and does not
+      offer engineering-of-record services.
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>
