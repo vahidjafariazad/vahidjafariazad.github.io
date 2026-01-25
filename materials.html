@@ -2,62 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Materials | V A</title>
+  <title>Infrastructure Materials | V A</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Infrastructure materials: constitutive behavior concepts, degradation mechanisms, and numerical robustness.">
   <link rel="stylesheet" href="styles.css">
-
-  <script defer data-domain="vahidjafariazad.github.io"
-          src="https://plausible.io/js/script.js"></script>
+  <script defer data-domain="vahidjafariazad.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 
 <body>
+<a class="skip" href="#content">Skip to content</a>
 
-<header>
-  <div class="container nav">
+<header class="site-header">
+  <div class="container navbar">
     <div class="brand">
       <div class="name">V A</div>
-      <div class="tag">Structural modeling • Software • Materials</div>
+      <div class="tag">Structures • Infrastructure Materials • Engineering Software</div>
     </div>
-    <nav class="menu">
+
+    <nav class="menu" aria-label="Primary navigation">
       <a href="index.html">Home</a>
-      <a href="modeling.html">Modeling</a>
-      <a href="software.html">Software</a>
-      <a class="active" href="materials.html">Materials</a>
+      <a href="structures.html">Structures</a>
+      <a class="active" href="materials.html">Infrastructure Materials</a>
+      <a href="software.html">Engineering Software</a>
       <a href="about.html">About</a>
     </nav>
+
+    <div class="nav-mobile" aria-label="Mobile navigation">
+      <details>
+        <summary>Menu</summary>
+        <div class="panel">
+          <a href="index.html">Home</a>
+          <a href="structures.html">Structures</a>
+          <a class="active" href="materials.html">Infrastructure Materials</a>
+          <a href="software.html">Engineering Software</a>
+          <a href="about.html">About</a>
+        </div>
+      </details>
+    </div>
   </div>
 </header>
 
-<main>
+<main id="content">
   <div class="container">
 
-    <h1>Infrastructure Material Modeling</h1>
+    <section class="hero">
+      <h1>Infrastructure Materials</h1>
+      <p>
+        Conceptual modeling of material behavior relevant to infrastructure systems, including nonlinear response,
+        degradation mechanisms, and numerical robustness.
+      </p>
+      <p class="sub">Work in progress: project writeups and figures will be added.</p>
+    </section>
 
-    <p>
-      Conceptual modeling of material behavior relevant to
-      infrastructure systems, including degradation and nonlinear response.
-    </p>
+    <section class="section">
+      <h2>Project Examples</h2>
 
-    <section class="card">
-      <h2>Technical Work Portfolio (Placeholder)</h2>
+      <div class="portfolio">
+        <article class="project">
+          <h3>Constitutive Behavior Concept</h3>
+          <p>Under construction. Will include stress–strain behavior, parameter interpretation, and response trends.</p>
+          <div class="figure-box">Figure area (e.g., stress–strain curve / state variable plot)</div>
+        </article>
 
-      <div class="card" style="margin-top:14px;">
-        <h3>Example 1 — Constitutive Behavior Concept</h3>
-        <p>
-          Placeholder for stress–strain response,
-          parameter interpretation, and behavior trends.
-        </p>
-        <p class="muted">Figure: representative response curve.</p>
+        <article class="project">
+          <h3>Degradation and Damage Modeling</h3>
+          <p>Under construction. Will include degradation mechanisms and numerical stability considerations.</p>
+          <div class="figure-box">Figure area (e.g., damage evolution plot)</div>
+        </article>
       </div>
 
-      <div class="card" style="margin-top:14px;">
-        <h3>Example 2 — Degradation and Damage Modeling</h3>
-        <p>
-          Placeholder for degradation mechanisms and numerical considerations.
-        </p>
-        <p class="muted">Figure: conceptual damage evolution plot.</p>
+      <div class="note">
+        Content will emphasize concepts and model behavior, not project-specific design values.
       </div>
-
     </section>
 
   </div>
@@ -65,7 +81,7 @@
 
 <footer>
   <div class="container">
-    <p>Conceptual material behavior only. No design values implied.</p>
+    <p>Conceptual material behavior only.</p>
   </div>
 </footer>
 
