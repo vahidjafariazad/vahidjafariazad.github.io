@@ -1,90 +1,309 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>V A | Technical Notes</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+:root{
+  --bg0:#070b13;
+  --bg1:#0b1220;
 
-  <!-- Privacy-friendly analytics -->
-  <script defer data-domain="vahidjafariazad.github.io"
-          src="https://plausible.io/js/script.js"></script>
-</head>
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.72);
 
-<body>
+  --line: rgba(255,255,255,0.14);
+  --panel: rgba(255,255,255,0.06);
+  --card: rgba(255,255,255,0.075);
 
-<header>
-  <div class="container nav">
-    <div class="brand">
-      <div class="name">V A</div>
-      <div class="tag">Structural modeling • Software • Materials</div>
-    </div>
-    <nav class="menu">
-      <a class="active" href="index.html">Home</a>
-      <a href="modeling.html">Modeling</a>
-      <a href="software.html">Software</a>
-      <a href="materials.html">Materials</a>
-      <a href="about.html">About</a>
-    </nav>
-  </div>
-</header>
+  --accent: #66c2ff;   /* technical blue */
+  --accent2:#8fffcb;   /* subtle mint */
 
-<main>
-  <div class="container">
+  --shadow: 0 14px 34px rgba(0,0,0,0.36);
 
-    <section class="hero">
-      <h1>Technical Notes</h1>
-      <p>
-        Advanced structural modeling and retrofit methodologies,
-        engineering software development, and infrastructure material modeling.
-      </p>
-      <p style="margin-top:10px; color:var(--muted);">
-        Method-focused, illustrative content intended for technical discussion.
-      </p>
-    </section>
+  --radius-xl: 18px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
 
-    <div class="grid">
+  --maxw: 1080px;
+}
 
-      <div class="card">
-        <h2>Advanced Modeling & Retrofit</h2>
-        <p>
-          Conceptual workflows centered on nonlinear behavior,
-          load-path reasoning, failure modes, and sensitivity.
-        </p>
-        <p><a href="modeling.html">View modeling work →</a></p>
-      </div>
+*{ box-sizing:border-box; }
 
-      <div class="card">
-        <h2>Software Development</h2>
-        <p>
-          Engineering-focused software development for transparent,
-          repeatable, and verifiable technical workflows.
-        </p>
-        <p><a href="software.html">View software work →</a></p>
-      </div>
+html, body { height: 100%; }
 
-      <div class="card">
-        <h2>Infrastructure Material Modeling</h2>
-        <p>
-          Conceptual treatment of constitutive behavior,
-          degradation mechanisms, and numerical robustness.
-        </p>
-        <p><a href="materials.html">View material work →</a></p>
-      </div>
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
 
-    </div>
-  </div>
-</main>
+  background:
+    radial-gradient(1200px 700px at 10% 12%, rgba(102,194,255,0.14), transparent 62%),
+    radial-gradient(900px 600px at 82% 18%, rgba(143,255,203,0.10), transparent 58%),
+    radial-gradient(800px 500px at 60% 90%, rgba(102,194,255,0.08), transparent 60%),
+    linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 100%);
+}
 
-<footer>
-  <div class="container">
-    <p>
-      This site presents independent technical notes and exploratory material.
-      It does not offer engineering-of-record services and does not substitute
-      for project-specific professional engineering judgment.
-    </p>
-  </div>
-</footer>
+/* Subtle technical grid overlay */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity: 0.20;
+  mask-image: radial-gradient(circle at 35% 20%, black 0%, transparent 70%);
+}
 
-</body>
-</html>
+.container{
+  width: min(var(--maxw), calc(100% - 36px));
+  margin: 0 auto;
+}
+
+a{
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
+
+code{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 2px 6px;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.88);
+}
+
+.skip{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip:focus{
+  left:16px;
+  top:16px;
+  width:auto;
+  height:auto;
+  padding:10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--line);
+  z-index: 999;
+}
+
+/* Header / nav */
+header.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(7,11,19,0.70);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding: 14px 0;
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1.12;
+}
+.brand .name{
+  font-weight: 760;
+  letter-spacing: 0.2px;
+}
+.brand .tag{
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+nav.menu{
+  display:flex;
+  gap:10px;
+  flex-wrap: wrap;
+  align-items:center;
+}
+
+nav.menu a{
+  color: var(--text);
+  text-decoration:none;
+  font-weight: 650;
+  font-size: 0.95rem;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+nav.menu a:hover{
+  border-color: var(--line);
+  background: var(--panel);
+}
+nav.menu a.active{
+  border-color: rgba(102,194,255,0.45);
+  background: rgba(102,194,255,0.10);
+}
+
+/* Mobile menu (no JS) */
+.nav-mobile{
+  display:none;
+}
+.nav-mobile details{
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+}
+.nav-mobile summary{
+  list-style:none;
+  cursor:pointer;
+  padding: 8px 10px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+}
+.nav-mobile summary::-webkit-details-marker{ display:none; }
+.nav-mobile .panel{
+  padding: 8px 10px 10px 10px;
+  display:flex;
+  flex-direction:column;
+  gap: 8px;
+}
+.nav-mobile a{
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: var(--text);
+  font-weight: 650;
+}
+.nav-mobile a.active{
+  border-color: rgba(102,194,255,0.45);
+  background: rgba(102,194,255,0.10);
+}
+.nav-mobile a:hover{
+  border-color: var(--line);
+  background: var(--panel);
+}
+
+/* Page layout */
+main{
+  padding: 34px 0 54px 0;
+}
+
+.hero{
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.045));
+  border-radius: var(--radius-xl);
+  padding: 22px 20px;
+  box-shadow: var(--shadow);
+}
+
+.hero h1{
+  margin: 0 0 8px 0;
+  font-size: 1.95rem;
+  letter-spacing: 0.2px;
+}
+.hero p{
+  margin: 0;
+  color: var(--muted);
+  max-width: 86ch;
+}
+.hero .sub{
+  margin-top: 10px;
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.70);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.card{
+  grid-column: span 6;
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 16px 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+.card h2{
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.card p, .card li{ color: var(--muted); }
+.card ul{ margin: 8px 0 0 18px; }
+
+.section{
+  margin-top: 18px;
+}
+.section h2{
+  margin: 0 0 10px 0;
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.88);
+}
+
+.portfolio{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+}
+
+.project{
+  grid-column: span 6;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg);
+  padding: 14px 14px;
+}
+
+.project h3{
+  margin: 0 0 6px 0;
+  font-size: 1.02rem;
+  color: rgba(255,255,255,0.92);
+}
+
+.project p{
+  margin: 0;
+  color: var(--muted);
+}
+
+.figure-box{
+  margin-top: 10px;
+  border: 1px dashed rgba(255,255,255,0.25);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  background: rgba(0,0,0,0.12);
+  color: rgba(255,255,255,0.65);
+  font-size: 0.95rem;
+}
+
+.note{
+  margin-top: 10px;
+  border-left: 3px solid rgba(102,194,255,0.55);
+  padding-left: 12px;
+  color: rgba(255,255,255,0.72);
+}
+
+/* Footer */
+footer{
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  padding: 18px 0 26px 0;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 860px){
+  .card{ grid-column: span 12; }
+  .project{ grid-column: span 12; }
+  nav.menu{ display:none; }
+  .nav-mobile{ display:block; }
+  .brand .tag{ display:none; }
+}
