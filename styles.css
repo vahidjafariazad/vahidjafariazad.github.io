@@ -20,6 +20,15 @@
 
   --maxw: 1080px;
 }
+.brand .tag{
+  font-size: 0.92rem;
+  color: var(--muted);
+  max-width: 44ch;
+}
+@media (max-width: 860px){
+  .brand .tag{ display:block; }
+}
+
 
 *{ box-sizing:border-box; }
 
