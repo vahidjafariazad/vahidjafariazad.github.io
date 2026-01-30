@@ -13,6 +13,16 @@
   --radius-lg: 16px;
   --radius-md: 12px;
   --maxw: 1080px;
+
+  /* Typography scale */
+  --h1: clamp(1.9rem, 1.2rem + 1.8vw, 2.35rem);
+  --h2: clamp(1.15rem, 0.95rem + 0.9vw, 1.45rem);
+  --h3: 1.02rem;
+
+  /* Heading colors */
+  --heading: rgba(255,255,255,0.96);
+  --heading2: rgba(102,194,255,0.92);
+  --heading3: rgba(143,255,203,0.85);
 }
 
 *{ box-sizing:border-box; }
@@ -183,10 +193,13 @@ main{ padding: 34px 0 54px 0; }
   padding: 22px 20px;
   box-shadow: var(--shadow);
 }
+
+/* Headings: clearer hierarchy */
 .hero h1{
-  margin: 0 0 8px 0;
-  font-size: 1.95rem;
-  letter-spacing: 0.2px;
+  margin: 0 0 10px 0;
+  font-size: var(--h1);
+  letter-spacing: 0.3px;
+  color: var(--heading);
 }
 .hero p{
   margin: 0;
@@ -224,9 +237,21 @@ main{ padding: 34px 0 54px 0; }
 
 .section{ margin-top: 18px; }
 .section h2{
-  margin: 0 0 10px 0;
-  font-size: 1.15rem;
-  color: rgba(255,255,255,0.88);
+  margin: 28px 0 12px 0;
+  font-size: var(--h2);
+  color: var(--heading2);
+  letter-spacing: 0.2px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.section h2::after{
+  content:"";
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  width: min(520px, 92%);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(102,194,255,0.55), rgba(255,255,255,0.00));
 }
 
 .portfolio{
@@ -242,13 +267,26 @@ main{ padding: 34px 0 54px 0; }
   padding: 14px 14px;
 }
 .project h3{
-  margin: 0 0 6px 0;
-  font-size: 1.02rem;
-  color: rgba(255,255,255,0.92);
+  margin: 0 0 8px 0;
+  font-size: var(--h3);
+  color: var(--heading);
+  letter-spacing: 0.15px;
 }
 .project p{
   margin: 0;
   color: var(--muted);
+}
+
+/* Category sub-heads (inside sections) */
+.subhead{
+  margin: 22px 0 10px 0;
+  font-size: 1.08rem;
+  font-weight: 750;
+  color: rgba(255,255,255,0.90);
+}
+.subhead span{
+  color: var(--heading3);
+  font-weight: 800;
 }
 
 .figure-box{
@@ -291,6 +329,17 @@ main{ padding: 34px 0 54px 0; }
 .link-btn:hover{
   background: rgba(255,255,255,0.07);
   text-decoration:none;
+}
+
+/* Single-column layout option for scrolling example lists */
+.portfolio.stack{
+  grid-template-columns: 1fr;
+}
+.portfolio.stack .project{
+  grid-column: auto;
+  max-width: 900px;
+  padding: 18px 18px;
+  background: rgba(255,255,255,0.055);
 }
 
 /* Footer */
