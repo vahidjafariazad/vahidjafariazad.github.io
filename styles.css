@@ -259,6 +259,7 @@ main{ padding: 34px 0 54px 0; }
   grid-template-columns: repeat(12, 1fr);
   gap: 14px;
 }
+
 .project{
   grid-column: span 6;
   border: 1px solid var(--line);
@@ -266,6 +267,7 @@ main{ padding: 34px 0 54px 0; }
   border-radius: var(--radius-lg);
   padding: 14px 14px;
 }
+
 .project h3{
   margin: 0 0 8px 0;
   font-size: var(--h3);
@@ -289,8 +291,19 @@ main{ padding: 34px 0 54px 0; }
   font-weight: 800;
 }
 
+/* Make example cards scroll-friendly on desktop too */
+.portfolio.stack{
+  grid-template-columns: 1fr;
+}
+.portfolio.stack .project{
+  grid-column: auto;
+  max-width: 920px;
+  padding: 18px 18px;
+  background: rgba(255,255,255,0.055);
+}
+
 .figure-box{
-  margin-top: 10px;
+  margin-top: 12px;
   border: 1px dashed rgba(255,255,255,0.25);
   border-radius: var(--radius-md);
   padding: 14px;
@@ -300,46 +313,10 @@ main{ padding: 34px 0 54px 0; }
 }
 
 .note{
-  margin-top: 10px;
+  margin-top: 12px;
   border-left: 3px solid rgba(102,194,255,0.55);
   padding-left: 12px;
   color: rgba(255,255,255,0.72);
-}
-
-/* Breadcrumb + utility link buttons */
-.breadcrumb{
-  margin-top: 8px;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-.breadcrumb a{ color: rgba(255,255,255,0.82); text-decoration:none; }
-.breadcrumb a:hover{ text-decoration: underline; }
-
-.link-btn{
-  display:inline-block;
-  margin-top: 12px;
-  padding: 9px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,0.04);
-  color: rgba(255,255,255,0.90);
-  font-weight: 650;
-  text-decoration:none;
-}
-.link-btn:hover{
-  background: rgba(255,255,255,0.07);
-  text-decoration:none;
-}
-
-/* Single-column layout option for scrolling example lists */
-.portfolio.stack{
-  grid-template-columns: 1fr;
-}
-.portfolio.stack .project{
-  grid-column: auto;
-  max-width: 900px;
-  padding: 18px 18px;
-  background: rgba(255,255,255,0.055);
 }
 
 /* Footer */
