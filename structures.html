@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Structures | V A</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Structural modeling, retrofit evaluation, nonlinear response, and validation-oriented workflows for complex infrastructure systems.">
+  <meta name="description" content="Structural analysis and design; structural assessment, rehabilitation, and retrofit. Work examples organized by engineering context with validation-oriented workflows.">
   <link rel="stylesheet" href="styles.css">
   <script defer data-domain="vahidjafariazad.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
@@ -45,71 +45,299 @@
 <main id="content">
   <div class="container">
 
+    <!-- HERO -->
     <section class="hero">
       <h1>Structures</h1>
       <p>
-        My structural work centers on complex infrastructure systems where modeling quality directly affects engineering
-        decisions. This includes nonlinear structural response, performance-based evaluation, and integrated soil–structure
-        interaction, with emphasis on transparency, validation, and sensitivity to governing assumptions. Much of this
-        work has been performed in marine and port environments and in high-consequence facilities where robustness and
-        traceability matter.
+        My work in structures spans a wide range of analysis and design problems, from conventional structural systems
+        governed by standard code provisions to complex structures requiring advanced modeling and nonlinear dynamic
+        analysis. The common thread is an emphasis on understanding governing mechanisms, selecting an appropriate level
+        of analytical fidelity, and interpreting results in a way that directly informs engineering decisions.
       </p>
     </section>
 
+    <!-- FOCUS AREAS -->
     <section class="section">
-      <h2>What I’m Known For</h2>
+      <h2>Focus Areas</h2>
 
       <div class="portfolio">
         <article class="project">
-          <h3>Nonlinear response and failure modes</h3>
+          <h3>Design range: conventional to advanced analysis</h3>
           <p>
-            Capturing governing mechanisms (material nonlinearity, contact, large deformation) and linking results to
-            interpretable demand and capacity measures.
+            Structural systems ranging from straightforward framing and component design to cases requiring nonlinear
+            material behavior, contact/impact effects, large deformations, or nonlinear dynamic response.
           </p>
-          <div class="figure-box">Work examples (in preparation): brief writeups with figures and notes.</div>
         </article>
 
         <article class="project">
-          <h3>Soil–structure interaction for system-level behavior</h3>
+          <h3>Nonlinear response and system behavior</h3>
           <p>
-            Integrated models that include structural and geotechnical components to understand load paths, boundary effects,
-            and sensitivity under seismic or extreme loading.
+            Nonlinear mechanisms in concrete and steel systems, including stiffness degradation, component interaction,
+            load path changes, and decision-relevant response measures under extreme loading.
           </p>
-          <div class="figure-box">Work examples (in preparation): model schematics, assumptions, and key findings.</div>
+        </article>
+
+        <article class="project">
+          <h3>Soil–structure and fluid–structure interaction</h3>
+          <p>
+            Integrated modeling where foundations and surrounding media influence system performance, boundary condition
+            sensitivity, and governing demand under seismic, operational, or environmental loading.
+          </p>
         </article>
 
         <article class="project">
           <h3>Performance-based evaluation and retrofit reasoning</h3>
           <p>
-            Nonlinear static and performance-based studies used to compare alternatives and identify practical retrofit
-            levers that move the outcome.
+            Model-driven evaluation used to compare alternatives, identify governing mechanisms, and support retrofit
+            decisions for existing structures and complex assets.
           </p>
-          <div class="figure-box">Work examples (in preparation): sanitized retrofit logic and response summaries.</div>
-        </article>
-
-        <article class="project">
-          <h3>Validation-first workflows</h3>
-          <p>
-            A bias toward checks: simplified bounding models, sensitivity runs, and cross-validation against expected behavior
-            before trusting “pretty plots.”
-          </p>
-          <div class="figure-box">Work examples (in preparation): verification checks and sensitivity patterns.</div>
         </article>
       </div>
 
       <div class="note">
-        Notes and examples will be shared at a technical level suitable for discussion and illustration, without client-identifying details.
+        The goal is not “more modeling.” It’s making modeling reliable enough that decisions can be defended.
       </div>
     </section>
 
+    <!-- METHODS & TOOLS -->
     <section class="section">
-      <h2>Representative Context</h2>
+      <h2>Methods &amp; Tools</h2>
+
       <div class="card" style="grid-column: span 12;">
         <p style="margin:0;">
-          Experience includes performance-based seismic evaluation and nonlinear modeling for marine and naval facilities,
-          including studies where 3D soil–structure interaction and nonlinear concrete behavior were central to retrofit decisions,
-          as well as port and terminal infrastructure work involving heavy-lift operational demands and system-level performance.
+          Structural problems are approached using a combination of engineering judgment, simplified bounding analyses,
+          and detailed numerical simulation as appropriate for the decision being supported. In addition to conventional
+          analysis and design workflows, I’ve developed pre- and post-processing tools and API-driven automation to
+          support repeatable modeling, reduce manual error, and improve traceability of results.
         </p>
+      </div>
+
+      <div class="portfolio" style="margin-top:14px;">
+        <article class="project">
+          <h3>Structural analysis and design platforms</h3>
+          <p>
+            Conventional modeling and design workflows using CSI software (SAP2000, ETABS, SAFE) for structural systems,
+            load combinations, design checks, and results interpretation.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Advanced finite element analysis</h3>
+          <p>
+            High-fidelity nonlinear simulation using advanced finite element tools (e.g., Abaqus, LS-DYNA) for problems
+            involving nonlinear material behavior, contact/impact, large deformation, and nonlinear dynamics.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Automation and model tooling</h3>
+          <p>
+            Development of pre-/post-processors and software API–based workflows to support parametric studies, model
+            generation, result extraction, quality checks, and consistent reporting.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Validation-oriented workflow</h3>
+          <p>
+            Bounding cases, sensitivity studies, and cross-checks against expected behavior, with traceable assumptions
+            and decision-relevant outputs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK EXAMPLES -->
+    <section class="section">
+      <h2>Work Examples</h2>
+
+      <div class="card" style="grid-column: span 12;">
+        <p style="margin:0;">
+          Work examples are organized by engineering context, rather than by client or project name. Each entry will be
+          concise and structured around the problem, approach, governing assumptions, and representative figures. Details
+          are presented in a non-proprietary and non-client-specific manner.
+        </p>
+      </div>
+
+      <!-- Structural Analysis and Design -->
+      <div class="section" style="margin-top:14px;">
+        <h2 style="font-size:1.10rem; color: rgba(255,255,255,0.88); margin-bottom:10px;">
+          Structural Analysis and Design
+        </h2>
+
+        <div class="portfolio">
+
+          <article class="project">
+            <h3>Industrial and Infrastructure Structures</h3>
+            <p>
+              Structural analysis and design for industrial and infrastructure systems, including gravity and lateral
+              load paths, system-level behavior, and interaction between structural components. Examples in this category
+              will range from conventional designs to cases requiring more detailed analytical treatment.
+            </p>
+
+            <div class="note">
+              Example slots will be populated with short writeups and figures.
+            </div>
+
+            <div class="portfolio" style="margin-top:12px;">
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example A (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+                <!-- Optional figure block (uncomment when you add an image)
+                <div class="figure-box">
+                  <img src="assets/images/example-a.png" alt="Example A figure" style="width:100%; border-radius:12px;">
+                  <p style="margin:10px 0 0 0; color: var(--muted); font-size:0.95rem;">Figure caption.</p>
+                </div>
+                -->
+              </article>
+
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example B (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Port and Maritime Structures</h3>
+            <p>
+              Analysis and design of port and maritime structures, including nearshore and waterfront systems where
+              interaction with soil and water, operational demands, and seismic effects can govern modeling choices and
+              design decisions.
+            </p>
+
+            <div class="note">
+              Example slots will be populated with short writeups and figures.
+            </div>
+
+            <div class="portfolio" style="margin-top:12px;">
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example C (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example D (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Specialized and High-Performance Structures</h3>
+            <p>
+              Structural systems requiring advanced analytical approaches, such as nonlinear response evaluation, dynamic
+              analysis, interaction effects, or specialized loading conditions. This category provides a home for complex
+              projects that later expand into offshore, impact, or other advanced applications.
+            </p>
+
+            <div class="note">
+              Example slots will be populated with short writeups and figures.
+            </div>
+
+            <div class="portfolio" style="margin-top:12px;">
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example E (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example F (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Structural Assessment, Rehabilitation, and Retrofit -->
+      <div class="section">
+        <h2 style="font-size:1.10rem; color: rgba(255,255,255,0.88); margin-bottom:10px;">
+          Structural Assessment, Rehabilitation, and Retrofit
+        </h2>
+
+        <div class="portfolio">
+
+          <article class="project">
+            <h3>Seismic Evaluation and Rehabilitation of Buildings</h3>
+            <p>
+              Performance-based evaluation and rehabilitation of existing building structures using nonlinear analysis and
+              established assessment methodologies to identify governing deficiencies and effective retrofit strategies.
+            </p>
+
+            <div class="note">
+              Example slots will be populated with short writeups and figures.
+            </div>
+
+            <div class="portfolio" style="margin-top:12px;">
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example G (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example H (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Port and Nearshore Structure Assessment and Load Rating</h3>
+            <p>
+              Assessment, load rating, and condition evaluation of existing port and nearshore structures, including heavy
+              structural systems subject to operational and environmental demands. Examples will emphasize interpretation
+              of demand, capacity, and degradation effects.
+            </p>
+
+            <div class="note">
+              Example slots will be populated with short writeups and figures.
+            </div>
+
+            <div class="portfolio" style="margin-top:12px;">
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example I (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example J (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Rehabilitation of Large-Scale Infrastructure Systems</h3>
+            <p>
+              Evaluation and rehabilitation of large-scale and heavy infrastructure systems where system behavior, boundary
+              conditions, and nonlinear response govern retrofit decisions. This includes structures where simplified methods
+              are insufficient and more advanced analysis is required.
+            </p>
+
+            <div class="note">
+              Example slots will be populated with short writeups and figures.
+            </div>
+
+            <div class="portfolio" style="margin-top:12px;">
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example K (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+
+              <article class="project" style="grid-column: span 12;">
+                <h3>Example L (to be added)</h3>
+                <p>Brief context, objective, approach, and key outputs.</p>
+              </article>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="note">
+        Codes and standards will be referenced within individual examples where relevant, rather than listed globally.
       </div>
     </section>
 
