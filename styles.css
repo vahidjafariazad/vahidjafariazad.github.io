@@ -334,3 +334,98 @@ footer{
   .nav-mobile{ display:block; }
   .brand .tag{ display:none; }
 }
+
+
+/* === Index enhancements: background images on capability cards === */
+.brand-sub{
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.66);
+  letter-spacing: 0.2px;
+}
+
+.hero-chips{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.80);
+  font-weight: 650;
+  font-size: 0.86rem;
+}
+
+/* Add background image support only when .card--withbg is used */
+.card--withbg{
+  position: relative;
+  overflow: hidden;
+}
+.card--withbg::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.22; /* light, so text stays readable */
+  filter: saturate(0.95) contrast(1.05) brightness(1.10);
+  transform: scale(1.06);
+}
+.card--withbg::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* soft overlay to preserve readability */
+  background:
+    linear-gradient(180deg, rgba(7,11,19,0.20), rgba(7,11,19,0.62)),
+    radial-gradient(800px 320px at 20% 10%, rgba(102,194,255,0.18), transparent 55%),
+    radial-gradient(800px 320px at 85% 30%, rgba(143,255,203,0.12), transparent 55%);
+}
+.card--withbg > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Slightly stronger heading and link treatment inside background cards */
+.card--withbg h2{
+  color: rgba(255,255,255,0.95);
+}
+.card--withbg h2 a{
+  color: rgba(255,255,255,0.96);
+  text-decoration: none;
+}
+.card--withbg h2 a:hover{
+  text-decoration: underline;
+}
+
+/* Hover: subtle lift and glow (professional, not flashy) */
+.card{
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+.card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(102,194,255,0.32);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+/* Map specific capability cards to images */
+.bg-software{ --card-bg: url("assets/images/comsol-gems.jpg"); }
+/* Add your own images later if desired */
+.bg-structures{ --card-bg: url("assets/images/structures-bg.jpg"); }
+.bg-materials{ --card-bg: url("assets/images/materials-bg.jpg"); }
+
+/* If an image is missing, keep the card clean */
+.bg-structures, .bg-materials, .bg-software{ --card-bg: var(--card-bg, none); }
+
+@media (max-width: 860px){
+  .brand-sub{ display:none; }
+}
