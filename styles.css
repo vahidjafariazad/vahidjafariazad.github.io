@@ -335,29 +335,20 @@ footer{
   .brand .tag{ display:none; }
 }
 
-
-/* === Home hero photo === */
 .hero-top{
   display:flex;
   align-items:flex-start;
-  justify-content:space-between;
-  gap: 18px;
+  gap: 16px;
 }
+.hero-top h1{ flex: 1; }
+
 .hero-photo{
-  width: 92px;
-  height: 92px;
-  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
   object-fit: cover;
   border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.30);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.28);
   opacity: 0.92;
+  margin-left: auto; /* push to the right */
 }
-@media (max-width: 600px){
-  .hero-top{ flex-direction:column; }
-  .hero-photo{ width: 84px; height: 84px; }
-}
-
-/* Use one placeholder background image for all capability cards (swap later) */
-.bg-structures{ --card-bg: url("assets/images/test.jpg"); }
-.bg-materials{ --card-bg: url("assets/images/test.jpg"); }
-.bg-software{ --card-bg: url("assets/images/test.jpg"); }
