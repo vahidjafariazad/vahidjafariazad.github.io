@@ -186,11 +186,7 @@ nav.menu a.active{
 /* Page layout */
 main{ padding: 34px 0 54px 0; }
 
-.hero{
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.045));
-  border-radius: var(--radius-xl);
-  padding: 22px 20px;
+
   box-shadow: var(--shadow);
 }
 
@@ -336,19 +332,27 @@ footer{
 }
 
 .hero-top{
-  display:flex;
-  align-items:flex-start;
-  gap: 16px;
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap: 22px;
+  align-items: start;
 }
+.hero-text{ min-width: 0; }
+
 .hero-top h1{ flex: 1; }
 
 .hero-photo{
-  width: 64px;
-  height: 64px;
-  border-radius: 14px;
+  width: 148px;
+  height: 148px;
+  border-radius: 18px;
   object-fit: cover;
   border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.28);
-  opacity: 0.92;
-  margin-left: auto; /* push to the right */
+  box-shadow: 0 16px 34px rgba(0,0,0,0.30);
+  opacity: 0.94;
+}
+
+
+@media (max-width: 600px){
+  .hero-top{ grid-template-columns: 1fr; }
+  .hero-photo{ width: 112px; height: 112px; }
 }
