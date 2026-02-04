@@ -356,6 +356,15 @@ footer{
   .page-home .hero-photo{ width: 112px; height: 112px; }
 }
 
+
+/* Hero intro card (used sitewide) */
+.hero-card{
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.055);
+  border-radius: var(--radius-xl);
+  padding: 18px 18px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.30);
+}
 /* Home hero card + photo layout (scoped to Home only) */
 .page-home .hero-card{
   border: 1px solid var(--line);
