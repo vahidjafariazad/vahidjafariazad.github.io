@@ -197,3 +197,48 @@ footer.site-footer{ border-top: 1px solid var(--line); color: var(--muted); padd
   nav.menu a, .project, button{ transition: none !important; }
   .project:hover, button:hover{ transform:none; }
 }
+
+/* Collapsible text blocks on Home */
+details.more{ margin-top: 10px; }
+details.more summary{
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.04);
+  font-weight: 760;
+  color: rgba(255,255,255,0.88);
+}
+details.more p{ margin: 10px 0 0 0; }
+
+/* About page: smaller, quieter photo */
+.page-about .hero-photo{
+  width: 110px;
+  height: 110px;
+  border-radius: 14px;
+  opacity: 0.90;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.28);
+}
+
+
+/* About hero layout: text left, photo right */
+.page-about .hero-about{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 36px;
+  align-items: center;
+}
+
+.page-about .hero-photo-wrap{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-about .hero-photo{
+  width: 110px;
+  height: 110px;
+  border-radius: 14px;
+  opacity: 0.9;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.28);
+}
