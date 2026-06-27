@@ -158,8 +158,49 @@ main{ padding: 36px 0 58px 0; }
 .portfolio.stack{ grid-template-columns: 1fr; }
 .portfolio.stack .project{ grid-column: auto; max-width: 940px; padding: 18px 18px; background: rgba(255,255,255,0.055); }
 
-.figure-box{ margin-top: 12px; border: 1px dashed rgba(255,255,255,0.25); border-radius: var(--radius-md); padding: 14px;
-  background: rgba(0,0,0,0.12); color: rgba(255,255,255,0.66); font-size: 0.95rem; }
+.figure-box{
+
+  margin-top: 12px;
+
+  border: 1px dashed rgba(255,255,255,0.25);
+
+  border-radius: var(--radius-md);
+
+  padding: 14px;
+
+  background: rgba(0,0,0,0.12);
+
+  color: rgba(255,255,255,0.66);
+
+  font-size: 0.95rem;
+
+
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+
+.figure-box img{
+
+  display: block;
+
+  width: 100%;
+
+  max-width: 500px;   /* Adjust to 400px, 600px, etc. */
+
+  height: auto;
+
+  border-radius: 10px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+
+}
 
 .note{ margin-top: 12px; border-left: 3px solid rgba(102,194,255,0.60); padding-left: 12px; color: rgba(255,255,255,0.74); }
 
