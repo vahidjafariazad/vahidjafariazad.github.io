@@ -513,11 +513,15 @@ a.spot-link:hover {
 }
 
 .project h3,
-.spot h2,
+.spot h2 {
+  overflow-wrap: break-word;
+}
+
 .page-hero h1,
 .spotlight h1 {
-  overflow-wrap: break-word;
-  hyphens: auto;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .page-section.has-section-bg {
@@ -1263,8 +1267,9 @@ button[type="submit"]:hover {
     letter-spacing: 0.01em;
   }
 
-  .spotlight h1 {
-    font-size: 1.85rem;
+  .spotlight h1,
+  .page-hero h1 {
+    font-size: 1.7rem;
   }
 
   .btn {
