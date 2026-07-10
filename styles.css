@@ -559,7 +559,7 @@ a.spot-link:hover {
   inset: 0;
   z-index: 0;
   background: var(--section-bg) center / cover no-repeat;
-  opacity: 0.4;
+  opacity: 0.55;
   pointer-events: none;
 }
 
@@ -571,9 +571,9 @@ a.spot-link:hover {
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(18, 28, 36, 0.28) 0%,
-    rgba(18, 28, 36, 0.38) 45%,
-    rgba(18, 28, 36, 0.52) 100%
+    rgba(18, 28, 36, 0.22) 0%,
+    rgba(18, 28, 36, 0.3) 45%,
+    rgba(18, 28, 36, 0.42) 100%
   );
 }
 
@@ -585,30 +585,30 @@ a.spot-link:hover {
 .page-section.has-section-bg .page-hero {
   padding: 1.15rem 1.25rem;
   margin-bottom: 0.35rem;
-  background: rgba(10, 16, 22, 0.72);
+  background: rgba(10, 16, 22, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-left: 3px solid var(--accent);
   border-bottom-color: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .page-section.has-section-bg .section h2 {
   padding: 0.55rem 0.85rem;
-  background: rgba(10, 16, 22, 0.72);
+  background: rgba(10, 16, 22, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-bottom-color: rgba(255, 255, 255, 0.12);
 }
 
 .project.on-section-bg {
-  background: rgba(10, 16, 22, 0.78);
+  background: rgba(10, 16, 22, 0.58);
   border-color: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .project.on-section-bg:hover {
-  background: rgba(14, 22, 30, 0.88);
+  background: rgba(14, 22, 30, 0.72);
   border-color: rgba(62, 201, 176, 0.35);
   transform: translateY(-2px);
 }
