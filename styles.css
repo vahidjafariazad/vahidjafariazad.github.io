@@ -1,4 +1,4 @@
-/* Hyperspace-inspired layout · warmer teal + lively type */
+﻿/* Hyperspace-inspired layout ┬╖ warmer teal + lively type */
 :root {
   --sidebar-w: 17.5rem;
   --bg: #14242c;
@@ -99,7 +99,7 @@ textarea:focus-visible {
   color: var(--ink);
 }
 
-/* ——— Layout (Hyperspace-style sidebar) ——— */
+/* ΓÇöΓÇöΓÇö Layout (Hyperspace-style sidebar) ΓÇöΓÇöΓÇö */
 .layout {
   display: flex;
   min-height: 100vh;
@@ -210,7 +210,7 @@ main {
   padding: 0 0 3.5rem;
 }
 
-/* ——— Spotlight / hero ——— */
+/* ΓÇöΓÇöΓÇö Spotlight / hero ΓÇöΓÇöΓÇö */
 .spotlight {
   position: relative;
   display: flex;
@@ -223,16 +223,14 @@ main {
 .spotlight .container {
   position: relative;
   z-index: 1;
-  isolation: isolate;
   min-height: min(72vh, 680px);
   display: flex;
   align-items: flex-end;
   padding: 4.5rem 1.5rem 2.75rem;
-  background-color: #121c24;
-  background-image: linear-gradient(90deg, var(--accent-warm), var(--accent), transparent 75%);
-  background-repeat: no-repeat;
-  background-size: 100% 2px;
-  background-position: left bottom;
+  background:
+    linear-gradient(105deg, rgba(16, 28, 36, 0.9) 6%, rgba(20, 36, 44, 0.72) 38%, rgba(20, 36, 44, 0.38) 100%),
+    linear-gradient(180deg, rgba(240, 180, 90, 0.14) 0%, transparent 38%),
+    url("assets/images/hero-overview.png") 70% center / cover no-repeat;
   border: 1px solid var(--line);
   border-bottom: none;
   overflow: hidden;
@@ -243,40 +241,29 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
   background:
-    url("assets/images/hero-overview.png") 72% 45% / cover no-repeat;
-  opacity: 0.3;
+    radial-gradient(600px 380px at 20% 80%, rgba(62, 201, 176, 0.22), transparent 60%),
+    radial-gradient(500px 320px at 90% 20%, rgba(240, 180, 90, 0.18), transparent 55%);
   pointer-events: none;
 }
 
 .spotlight .container::after {
   content: "";
   position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    105deg,
-    rgba(18, 28, 36, 0.78) 0%,
-    rgba(18, 28, 36, 0.58) 28%,
-    rgba(18, 28, 36, 0.28) 52%,
-    rgba(18, 28, 36, 0.1) 78%,
-    rgba(18, 28, 36, 0.04) 100%
-  );
+  inset: auto 0 0 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-warm), var(--accent), transparent 75%);
 }
 
 .spotlight-copy {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   max-width: 42rem;
-  padding: 1.5rem 1.55rem;
-  background: rgba(10, 16, 22, 0.92);
+  padding: 1.45rem 1.5rem;
+  background: rgba(12, 20, 28, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-left: 3px solid var(--accent-warm);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(8px);
 }
 
 .spotlight .kicker {
@@ -297,12 +284,12 @@ main {
   line-height: 1.1;
   letter-spacing: -0.02em;
   max-width: 18ch;
-  text-shadow: none;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.4);
 }
 
 .spotlight .lede {
   margin: 0;
-  max-width: 46ch;
+  max-width: 44ch;
   font-size: var(--text-lg);
   font-weight: 500;
   line-height: 1.58;
@@ -402,7 +389,7 @@ main {
   border: 1px solid var(--line);
 }
 
-/* ——— Sections ——— */
+/* ΓÇöΓÇöΓÇö Sections ΓÇöΓÇöΓÇö */
 .section {
   margin-top: 2.75rem;
   animation: rise 700ms var(--ease) both;
@@ -537,6 +524,19 @@ a.spot-link:hover {
   hyphens: none;
 }
 
+.section-visual {
+  margin: 0 0 2rem;
+  border: 1px solid var(--line);
+  background: #0a1218;
+  overflow: hidden;
+}
+
+.section-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .page-section.has-section-bg {
   position: relative;
   isolation: isolate;
@@ -549,75 +549,19 @@ a.spot-link:hover {
 .page-section.has-section-bg > .container {
   position: relative;
   z-index: 1;
-  isolation: isolate;
   padding: 2rem 1.5rem 2.5rem;
-  background-color: #121c24;
-  border: 1px solid var(--line);
-  overflow: hidden;
-}
-
-.page-section.has-section-bg > .container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(46%, 34rem);
-  z-index: 0;
-  background-color: #0e171e;
+  background-color: var(--bg);
   background-image:
-    linear-gradient(180deg, rgba(12, 20, 28, 0.28), rgba(12, 20, 28, 0.42)),
+    linear-gradient(180deg, rgba(16, 28, 36, 0.7) 0%, rgba(20, 36, 44, 0.58) 45%, rgba(20, 36, 44, 0.74) 100%),
     var(--section-bg);
-  background-repeat: no-repeat;
-  background-size: cover, cover;
-  background-position: center, 18% center;
-  opacity: 1;
-  pointer-events: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.55) 18%, #000 42%);
-  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.55) 18%, #000 42%);
-}
-
-.page-section.has-section-bg > .container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    #121c24 0%,
-    #121c24 48%,
-    rgba(18, 28, 36, 0.82) 62%,
-    rgba(18, 28, 36, 0.35) 78%,
-    rgba(18, 28, 36, 0.18) 100%
-  );
-}
-
-.page-section.has-section-bg > .container > * {
-  position: relative;
-  z-index: 1;
+  background-size: cover;
+  background-position: 70% center;
+  background-attachment: scroll;
+  border: 1px solid var(--line);
 }
 
 .page-section.has-section-bg .page-hero {
-  max-width: min(48rem, 58%);
-  padding: 1.15rem 1.25rem;
-  margin-bottom: 0.35rem;
-  background: rgba(10, 16, 22, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-left: 3px solid var(--accent);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.page-section.has-section-bg .page-hero h1,
-.page-section.has-section-bg .page-hero .sub,
-.page-section.has-section-bg .page-hero p {
-  max-width: none;
-}
-
-.page-section.has-section-bg .section {
-  max-width: min(48rem, 58%);
+  border-bottom-color: rgba(255, 255, 255, 0.18);
 }
 
 .page-section.has-section-bg .section h2 {
@@ -625,26 +569,26 @@ a.spot-link:hover {
 }
 
 .project.on-section-bg {
-  background: rgba(10, 16, 22, 0.94);
-  border-color: rgba(255, 255, 255, 0.14);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  background: rgba(10, 18, 24, 0.55);
+  border-color: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .project.on-section-bg:hover {
-  background: rgba(14, 22, 30, 0.98);
+  background: rgba(10, 18, 24, 0.68);
   border-color: rgba(62, 201, 176, 0.35);
   transform: translateY(-2px);
 }
 
 .project.on-section-bg h3 {
   color: #fff;
-  text-shadow: none;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
 }
 
 .project.on-section-bg p {
-  color: rgba(245, 241, 234, 0.9);
-  text-shadow: none;
+  color: rgba(245, 241, 234, 0.94);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 
 .portfolio.stack .project.on-section-bg {
@@ -1184,60 +1128,16 @@ button[type="submit"]:hover {
   .spotlight .container {
     min-height: min(58vh, 460px);
     padding: 3.5rem 1.1rem 2rem;
-  }
-
-  .spotlight .container::before {
-    background-position: 78% 100%;
-    background-size: cover;
-    opacity: 0.26;
+    background-position: 75% center;
   }
 
   .spotlight-copy {
     max-width: none;
-    padding: 1.15rem 1.15rem;
-    background: rgba(10, 16, 22, 0.9);
+    padding: 1.1rem 1.1rem;
   }
 
   .spotlight h1 {
     max-width: none;
-  }
-
-  .page-section.has-section-bg {
-    padding-top: 1rem;
-    padding-bottom: 1.75rem;
-  }
-
-  .page-section.has-section-bg > .container {
-    padding: 1.5rem 1.1rem 2rem;
-  }
-
-  .page-section.has-section-bg > .container::before {
-    width: 100%;
-    opacity: 0.14;
-    background-size: cover;
-    background-position: 70% 12%;
-    border-left: none;
-    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.2) 28%, transparent 52%);
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.2) 28%, transparent 52%);
-  }
-
-  .page-section.has-section-bg > .container::after {
-    background: linear-gradient(
-      180deg,
-      rgba(18, 28, 36, 0.55) 0%,
-      rgba(18, 28, 36, 0.88) 32%,
-      #121c24 48%,
-      #121c24 100%
-    );
-  }
-
-  .page-section.has-section-bg .page-hero,
-  .page-section.has-section-bg .section {
-    max-width: none;
-  }
-
-  .page-section.has-section-bg .page-hero {
-    padding: 1rem 1.05rem;
   }
 
   .hero-actions {
@@ -1250,6 +1150,16 @@ button[type="submit"]:hover {
 
   .page-hero.has-bg {
     padding: 2rem 1.1rem;
+  }
+
+  .page-section.has-section-bg {
+    padding-top: 1rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .page-section.has-section-bg > .container {
+    padding: 1.5rem 1.1rem 2rem;
+    background-position: 80% 20%;
   }
 
   .project,
@@ -1295,19 +1205,9 @@ button[type="submit"]:hover {
     padding: 3rem 0.95rem 1.5rem;
   }
 
-  .spotlight .container::before {
-    background-position: 85% 100%;
-    opacity: 0.22;
-  }
-
   .spotlight-copy {
     padding: 0.95rem 0.95rem;
     backdrop-filter: blur(8px);
-  }
-
-  .page-section.has-section-bg > .container::before {
-    background-position: 72% 0%;
-    opacity: 0.12;
   }
 
   .spotlight .lede {
