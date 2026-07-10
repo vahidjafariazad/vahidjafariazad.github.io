@@ -223,14 +223,16 @@ main {
 .spotlight .container {
   position: relative;
   z-index: 1;
+  isolation: isolate;
   min-height: min(72vh, 680px);
   display: flex;
   align-items: flex-end;
   padding: 4.5rem 1.5rem 2.75rem;
-  background:
-    linear-gradient(105deg, rgba(16, 28, 36, 0.9) 6%, rgba(20, 36, 44, 0.72) 38%, rgba(20, 36, 44, 0.38) 100%),
-    linear-gradient(180deg, rgba(240, 180, 90, 0.14) 0%, transparent 38%),
-    url("assets/images/hero-overview.png") 70% center / cover no-repeat;
+  background-color: #121c24;
+  background-image: linear-gradient(90deg, var(--accent-warm), var(--accent), transparent 75%);
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: left bottom;
   border: 1px solid var(--line);
   border-bottom: none;
   overflow: hidden;
@@ -241,29 +243,37 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(600px 380px at 20% 80%, rgba(62, 201, 176, 0.22), transparent 60%),
-    radial-gradient(500px 320px at 90% 20%, rgba(240, 180, 90, 0.18), transparent 55%);
+  z-index: 0;
+  background: url("assets/images/hero-overview.png") center / cover no-repeat;
+  opacity: 0.42;
   pointer-events: none;
 }
 
 .spotlight .container::after {
   content: "";
   position: absolute;
-  inset: auto 0 0 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-warm), var(--accent), transparent 75%);
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    rgba(18, 28, 36, 0.48) 0%,
+    rgba(18, 28, 36, 0.28) 36%,
+    rgba(18, 28, 36, 0.1) 68%,
+    rgba(18, 28, 36, 0.04) 100%
+  );
 }
 
 .spotlight-copy {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 42rem;
-  padding: 1.45rem 1.5rem;
-  background: rgba(12, 20, 28, 0.72);
+  padding: 1.5rem 1.55rem;
+  background: rgba(10, 16, 22, 0.58);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-left: 3px solid var(--accent-warm);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .spotlight .kicker {
@@ -524,19 +534,6 @@ a.spot-link:hover {
   hyphens: none;
 }
 
-.section-visual {
-  margin: 0 0 2rem;
-  border: 1px solid var(--line);
-  background: #0a1218;
-  overflow: hidden;
-}
-
-.section-visual img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .page-section.has-section-bg {
   position: relative;
   isolation: isolate;
@@ -549,46 +546,81 @@ a.spot-link:hover {
 .page-section.has-section-bg > .container {
   position: relative;
   z-index: 1;
+  isolation: isolate;
   padding: 2rem 1.5rem 2.5rem;
-  background-color: var(--bg);
-  background-image:
-    linear-gradient(180deg, rgba(16, 28, 36, 0.7) 0%, rgba(20, 36, 44, 0.58) 45%, rgba(20, 36, 44, 0.74) 100%),
-    var(--section-bg);
-  background-size: cover;
-  background-position: 70% center;
-  background-attachment: scroll;
+  background-color: #121c24;
   border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.page-section.has-section-bg > .container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--section-bg) center / cover no-repeat;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.page-section.has-section-bg > .container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 28, 36, 0.28) 0%,
+    rgba(18, 28, 36, 0.38) 45%,
+    rgba(18, 28, 36, 0.52) 100%
+  );
+}
+
+.page-section.has-section-bg > .container > * {
+  position: relative;
+  z-index: 1;
 }
 
 .page-section.has-section-bg .page-hero {
-  border-bottom-color: rgba(255, 255, 255, 0.18);
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 0.35rem;
+  background: rgba(10, 16, 22, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 3px solid var(--accent);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .page-section.has-section-bg .section h2 {
-  border-bottom-color: rgba(255, 255, 255, 0.18);
+  padding: 0.55rem 0.85rem;
+  background: rgba(10, 16, 22, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
 }
 
 .project.on-section-bg {
-  background: rgba(10, 18, 24, 0.55);
-  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(10, 16, 22, 0.78);
+  border-color: rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
 .project.on-section-bg:hover {
-  background: rgba(10, 18, 24, 0.68);
+  background: rgba(14, 22, 30, 0.88);
   border-color: rgba(62, 201, 176, 0.35);
   transform: translateY(-2px);
 }
 
 .project.on-section-bg h3 {
   color: #fff;
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+  text-shadow: none;
 }
 
 .project.on-section-bg p {
-  color: rgba(245, 241, 234, 0.94);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  color: rgba(245, 241, 234, 0.92);
+  text-shadow: none;
 }
 
 .portfolio.stack .project.on-section-bg {
