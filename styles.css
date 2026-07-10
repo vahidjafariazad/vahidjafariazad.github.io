@@ -191,16 +191,11 @@ main {
 /* ——— Spotlight / hero ——— */
 .spotlight {
   position: relative;
-  min-height: min(72vh, 640px);
-  display: flex;
-  align-items: center;
-  padding: 4.5rem 0 3.5rem;
+  padding: 3.25rem 0 2.75rem;
   background:
-    linear-gradient(105deg, rgba(8, 17, 31, 0.88) 18%, rgba(8, 17, 31, 0.55) 55%, rgba(13, 26, 46, 0.4) 100%),
-    radial-gradient(700px 420px at 85% 20%, rgba(61, 139, 253, 0.22), transparent 60%),
-    url("assets/images/Ports.jpg") right center / cover no-repeat;
+    radial-gradient(700px 420px at 85% 10%, rgba(61, 139, 253, 0.18), transparent 60%),
+    linear-gradient(180deg, #0a1628 0%, var(--bg) 100%);
   border-bottom: 1px solid var(--line);
-  overflow: hidden;
 }
 
 .spotlight::after {
@@ -212,7 +207,13 @@ main {
 }
 
 .spotlight .container {
+  display: grid;
+  gap: 1.75rem;
   animation: rise 700ms var(--ease) both;
+}
+
+.spotlight-copy {
+  max-width: 42rem;
 }
 
 .spotlight .kicker {
@@ -240,6 +241,20 @@ main {
   max-width: 40ch;
   font-size: 1.15rem;
   color: var(--muted);
+}
+
+.spotlight-figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: #06101c;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.spotlight-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero-actions {
@@ -422,6 +437,35 @@ main {
 
 .spot .arrow:hover {
   color: #7eb6ff;
+}
+
+a.spot-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.spot-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Single-page sections */
+.page-section {
+  scroll-margin-top: 4.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-section:last-of-type {
+  border-bottom: none;
+}
+
+#intro.page-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.jump-links {
+  margin-top: 2rem;
 }
 
 details.more {
@@ -782,8 +826,7 @@ button[type="submit"]:hover {
   }
 
   .spotlight {
-    min-height: auto;
-    padding: 3rem 0 2.5rem;
+    padding: 2.5rem 0 2rem;
   }
 
   .spotlight h1 {

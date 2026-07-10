@@ -13,21 +13,21 @@
   <script defer data-domain="vahidjafariazad.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body class="page-home">
-  <a class="skip" href="#content">Skip to content</a>
+  <a class="skip" href="#intro">Skip to content</a>
 
   <div class="layout">
     <aside class="sidebar" aria-label="Site">
       <div>
         <div class="brand">
-          <div class="name"><a href="index.html" class="brand-link">VAHID AZAD</a></div>
+          <div class="name"><a href="#intro" class="brand-link">VAHID AZAD</a></div>
           <div class="tag">PhD, PE</div>
         </div>
-        <nav aria-label="Primary navigation">
-          <a class="active" href="index.html">Home</a>
-          <a href="structures.html">Structures</a>
-          <a href="materials.html">Infrastructure Materials</a>
-          <a href="software.html">Engineering Software</a>
-          <a href="about.html">About</a>
+        <nav class="side-nav" aria-label="Primary navigation">
+          <a href="#intro" data-section="intro">Home</a>
+          <a href="#structures" data-section="structures">Structures</a>
+          <a href="#materials" data-section="materials">Infrastructure Materials</a>
+          <a href="#software" data-section="software">Engineering Software</a>
+          <a href="#about" data-section="about">About</a>
         </nav>
       </div>
       <div class="sidebar-foot">Structures · Materials · Software</div>
@@ -37,78 +37,477 @@
       <div class="mobile-bar">
         <div class="row">
           <div class="brand">
-            <div class="name"><a href="index.html" class="brand-link">VAHID AZAD</a></div>
+            <div class="name"><a href="#intro" class="brand-link">VAHID AZAD</a></div>
             <div class="tag">PhD, PE</div>
           </div>
-          <details>
+          <details id="mobile-menu">
             <summary>Menu</summary>
-            <div class="panel">
-              <a class="active" href="index.html">Home</a>
-              <a href="structures.html">Structures</a>
-              <a href="materials.html">Infrastructure Materials</a>
-              <a href="software.html">Engineering Software</a>
-              <a href="about.html">About</a>
+            <div class="panel side-nav">
+              <a href="#intro" data-section="intro">Home</a>
+              <a href="#structures" data-section="structures">Structures</a>
+              <a href="#materials" data-section="materials">Infrastructure Materials</a>
+              <a href="#software" data-section="software">Engineering Software</a>
+              <a href="#about" data-section="about">About</a>
             </div>
           </details>
         </div>
       </div>
 
       <main id="content">
-        <section class="spotlight" aria-label="Introduction">
+        <!-- HOME -->
+        <section id="intro" class="page-section spotlight" aria-label="Introduction">
           <div class="container">
-            <p class="kicker">Vahid Azad · PhD, PE</p>
-            <h1>Structures, Materials &amp; Software</h1>
-            <p class="lede">
-              Structural engineer focused on complex infrastructure systems—where nonlinear behavior,
-              multiphysics coupling, and durable materials performance shape the decision.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="structures.html">View structures work</a>
-              <a class="btn btn-ghost" href="about.html">About &amp; contact</a>
+            <div class="spotlight-copy">
+              <p class="kicker">Vahid Azad · PhD, PE</p>
+              <h1>Structures, Materials &amp; Software</h1>
+              <p class="lede">
+                Structural engineer focused on complex infrastructure systems—where nonlinear behavior,
+                multiphysics coupling, and durable materials performance shape the decision.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#structures">View structures work</a>
+                <a class="btn btn-ghost" href="#about">About &amp; contact</a>
+              </div>
+            </div>
+            <figure class="spotlight-figure">
+              <img src="assets/images/hero-overview.png" alt="Overview of structures, materials modeling, and engineering software capabilities">
+            </figure>
+
+            <div class="section jump-links">
+              <h2>Explore</h2>
+              <div class="spots">
+                <a class="spot spot-link" href="#structures">
+                  <div>
+                    <h2>Structures</h2>
+                    <p>Analysis, design, and evaluation of industrial, waterfront, and specialized structural systems.</p>
+                  </div>
+                  <span class="arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="spot spot-link" href="#materials">
+                  <div>
+                    <h2>Infrastructure Materials</h2>
+                    <p>Durability and long-term performance of cementitious systems in aggressive environments.</p>
+                  </div>
+                  <span class="arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="spot spot-link" href="#software">
+                  <div>
+                    <h2>Engineering Software</h2>
+                    <p>Computational workflows that make complex analysis more repeatable, auditable, and efficient.</p>
+                  </div>
+                  <span class="arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="spot spot-link" href="#about">
+                  <div>
+                    <h2>About &amp; Contact</h2>
+                    <p>Background, selected publications, and a private contact form.</p>
+                  </div>
+                  <span class="arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        <div class="container">
-          <section class="section">
-            <h2>Practice areas</h2>
-            <div class="spots">
-              <article class="spot">
-                <div>
-                  <h2><a href="structures.html">Structural Analysis &amp; Design</a></h2>
-                  <p>Analysis, design, and evaluation of industrial, waterfront, and specialized structural systems, from code-based design through high-fidelity nonlinear simulation.</p>
-                  <details class="more">
-                    <summary>More</summary>
-                    <p>Experience includes nonlinear response, soil–structure and fluid–structure interaction, contact and impact, large deformations, and advanced concrete and steel material models—using both commercial platforms and custom numerical development.</p>
-                  </details>
-                </div>
-                <a class="arrow" href="structures.html" aria-label="Go to Structures">→</a>
-              </article>
-              <article class="spot">
-                <div>
-                  <h2><a href="materials.html">Infrastructure Materials &amp; Durability</a></h2>
-                  <p>Durability and long-term performance of cementitious systems in aggressive environments, grounded in coupled chemistry–transport modeling.</p>
-                  <details class="more">
-                    <summary>More</summary>
-                    <p>Work covers hydration, degradation, corrosion, and transport-driven deterioration through coupled thermodynamic, transport, and thermal analyses that connect mechanisms to service-life outcomes under realistic operating conditions.</p>
-                  </details>
-                </div>
-                <a class="arrow" href="materials.html" aria-label="Go to Infrastructure Materials">→</a>
-              </article>
-              <article class="spot">
-                <div>
-                  <h2><a href="software.html">Engineering Software &amp; Computational Tools</a></h2>
-                  <p>Software and computational workflows that make complex analysis more repeatable, auditable, and efficient.</p>
-                  <details class="more">
-                    <summary>More</summary>
-                    <p>This includes extending algorithms in commercial platforms, building pre- and post-processing tools for advanced models, and developing API-driven automation that strengthens quality control in sophisticated simulation environments.</p>
-                  </details>
-                </div>
-                <a class="arrow" href="software.html" aria-label="Go to Engineering Software">→</a>
-              </article>
+        <!-- STRUCTURES -->
+        <section id="structures" class="page-section">
+          <div class="container">
+            <header class="page-hero">
+              <h1>Structures</h1>
+              <p>
+                Structural engineering work spans conventional code-based design through advanced nonlinear and
+                dynamic analysis. The focus is identifying governing mechanisms, choosing the right analytical
+                fidelity, and interpreting results so they directly inform engineering decisions.
+              </p>
+            </header>
+
+            <div class="section">
+              <h2>Focus Areas</h2>
+              <div class="portfolio two-col">
+                <article class="project">
+                  <h3>Structural Design: From Code-Based to Advanced Analysis</h3>
+                  <p>
+                    Design and verification from standard code-based workflows to high-fidelity nonlinear simulation
+                    when demands involve large deformation, contact/impact, or dynamic response. Emphasis on matching
+                    analytical fidelity to the decision and keeping assumptions auditable.
+                  </p>
+                </article>
+                <article class="project">
+                  <h3>Performance-Based Assessment &amp; Retrofit Reasoning</h3>
+                  <p>
+                    Evaluation of existing structures with focus on governing behavior, bounding uncertainty, and
+                    comparing retrofit alternatives using decision-relevant performance metrics and traceable
+                    analytical assumptions.
+                  </p>
+                </article>
+              </div>
+              <div class="note">
+                The goal is not “more modeling”—it is making modeling reliable enough that decisions can be defended.
+              </div>
             </div>
-          </section>
-        </div>
+
+            <div class="section">
+              <h2>Methods &amp; Tools</h2>
+              <p class="section-intro">
+                Problems are approached with engineering judgment, simplified bounding analyses, and detailed
+                numerical simulation—each at the fidelity the decision requires. Tooling and automation support
+                repeatable workflows, reduce manual error, and strengthen traceability.
+              </p>
+              <div class="portfolio two-col">
+                <article class="project">
+                  <h3>Structural Analysis &amp; Design Platforms</h3>
+                  <p>
+                    Conventional analysis and design with CSI software (SAP2000, ETABS, SAFE) for load combinations,
+                    design checks, and structural behavior interpretation.
+                  </p>
+                </article>
+                <article class="project">
+                  <h3>Advanced Finite Element Analysis</h3>
+                  <p>
+                    High-fidelity nonlinear analysis with tools such as Abaqus and LS-DYNA for material nonlinearity,
+                    contact, impact, large deformation, and nonlinear dynamics.
+                  </p>
+                </article>
+                <article class="project">
+                  <h3>Automation &amp; Model Tooling</h3>
+                  <p>
+                    Pre/post-processing tools and API-driven workflows for model generation, parametric studies,
+                    results extraction, QA/QC, and reporting.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div class="section">
+              <h2>Work Examples</h2>
+              <p class="section-intro">
+                Figures are illustrative only and do not represent actual project models, geometry, or proprietary client data.
+              </p>
+              <h3 class="subhead">Structural Analysis &amp; Design</h3>
+              <div class="portfolio stack">
+                <article class="project">
+                  <div>
+                    <h3>Port &amp; Maritime Structures</h3>
+                    <p>
+                      Analysis and design of piers, wharves, seawalls, bulkheads, and dolphin systems using applicable
+                      waterfront criteria (ASCE 61, UFC 4‑152, MOTEMS, and POLB Wharf Design Criteria). Nonlinear
+                      assessment methods (including FEMA/ATC-style procedures) are used where needed for performance
+                      evaluation or retrofit decision support.
+                    </p>
+                  </div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Special Structures</h3>
+                    <p>
+                      Advanced analysis for offshore and nearshore systems including nonlinear dynamic response,
+                      interaction effects, hydrodynamic loading, and impact. Example work includes wind turbine
+                      foundations, submerged energy systems, and offshore anchor systems (suction, drag, plate, torpedo),
+                      applying international offshore standards (DNV, ABS, Eurocodes).
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for special structures"></div>
+                </article>
+              </div>
+              <h3 class="subhead">Structural Assessment, Rehabilitation &amp; Retrofit</h3>
+              <div class="portfolio stack">
+                <article class="project">
+                  <div>
+                    <h3>Seismic Evaluation &amp; Rehabilitation of Buildings</h3>
+                    <p>
+                      Performance-based evaluation using FEMA 356 and ATC 40 nonlinear assessment procedures to
+                      characterize structural behavior and support rehabilitation decisions.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for seismic evaluation"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Assessment &amp; Load Rating of Port/Nearshore Structures</h3>
+                    <p>
+                      Assessment and rehabilitation planning for existing waterfront structures using criteria such as
+                      ASCE 61, UFC 4‑152, MOTEMS, and POLB WDC. Nonlinear displacement-based methods are applied where
+                      needed to support retrofit comparisons and operational decisions.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for port structure assessment"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Rehabilitation of Large-Scale Infrastructure</h3>
+                    <p>
+                      Evaluation and retrofit of Navy and defense-related waterfront systems where nonlinear response
+                      and soil–structure interaction govern. Analyses have used Abaqus and LS-DYNA with nonlinear
+                      material behavior, advanced meshing, and large-deformation formulations, supported by Python-based
+                      pre/post-processing for repeatable workflows.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for large-scale infrastructure rehabilitation"></div>
+                </article>
+              </div>
+              <div class="note">
+                Codes and standards are referenced within examples where relevant.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MATERIALS -->
+        <section id="materials" class="page-section">
+          <div class="container">
+            <header class="page-hero">
+              <h1>Infrastructure Materials</h1>
+              <p class="sub">Coupled chemistry–transport modeling for durability and long-term performance.</p>
+              <p>
+                Work in infrastructure materials centers on cementitious systems whose long-term performance is
+                governed by coupled chemistry and transport. The emphasis is model robustness, clear assumptions,
+                and workflows that connect thermodynamics, reactive transport, and durability mechanisms. This
+                body of work was developed primarily in research settings—mechanism-driven analysis rather than
+                project-specific engineering deliverables.
+              </p>
+            </header>
+            <div class="section">
+              <h2>Focus Areas</h2>
+              <div class="portfolio stack">
+                <article class="project">
+                  <div>
+                    <h3>Reactive-transport modeling in cementitious materials</h3>
+                    <p>
+                      Coupling transport and chemical reactions to represent multi-species processes in porous media,
+                      including cement systems with complex chemistry and evolving pore solution conditions. Includes
+                      developing and applying a COMSOL–GEMS reactive-transport interface that links finite-element
+                      transport with thermodynamic equilibrium calculations—enabling realistic multi-phase chemistry
+                      and extended Nernst–Planck transport in cement systems.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for reactive-transport modeling"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Thermodynamic modeling for cement chemistry</h3>
+                    <p>
+                      Thermodynamic equilibrium modeling to interpret chemical speciation, phase stability, pore
+                      solution composition, and binding mechanisms in cementitious systems. Includes coupling
+                      thermodynamics with hydration models to understand how SCMs influence phase assemblages,
+                      porosity, chloride binding, and durability-relevant transport.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for thermodynamic cement chemistry modeling"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Corrosion initiation mechanisms in reinforced concrete</h3>
+                    <p>
+                      Research on localized electrochemical conditions that control passive film stability at the
+                      steel–concrete interface. Includes modeling mill scale crevices with extended Nernst–Planck and
+                      Poisson formulations to show how localized pH and Cl⁻/OH⁻ conditions promote depassivation, along
+                      with studies of passive film electronic properties.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for corrosion initiation modeling"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Hydration, heat, and mass transport coupling</h3>
+                    <p>
+                      Integrated modeling of hydration kinetics, heat generation, and mass transport to interpret
+                      evolving phase assemblages, pore structure, and water distribution during early-age behavior—
+                      linking thermodynamics and transport to durability performance.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for hydration and transport coupling"></div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SOFTWARE -->
+        <section id="software" class="page-section">
+          <div class="container">
+            <header class="page-hero">
+              <h1>Engineering Software Development</h1>
+              <p class="sub">Simulation tooling, integration, and automation for reliable engineering workflows.</p>
+              <p>
+                Engineering software work focuses on extending and integrating advanced simulation tools so they
+                can be used reliably on complex problems. That includes numerical method development, multiphysics
+                coupling, and workflow automation across commercial and open-source platforms—with emphasis on
+                correctness, transparency, and repeatability rather than black-box automation.
+              </p>
+            </header>
+            <div class="section">
+              <h2>Focus Areas</h2>
+              <div class="portfolio stack">
+                <article class="project">
+                  <div>
+                    <h3>Software development for commercial engineering platforms</h3>
+                    <p>
+                      Independent development for design software companies, contributing engineering algorithms and
+                      extensions inside commercial simulation platforms. This requires close coordination with existing
+                      codebases, numerical assumptions, and validation practices.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for commercial platform development"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>API-driven automation and tooling</h3>
+                    <p>
+                      Engineering automation through software APIs, including SAP2000, Abaqus, LS-DYNA (via Primer),
+                      and COMSOL Multiphysics (MATLAB and Java interfaces). Applications include design automation,
+                      parametric studies, model generation, and repeatable post-processing.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for API-driven automation"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Pre- and post-processing for complex models</h3>
+                    <p>
+                      Custom tools for model setup, data conditioning, and results extraction in large simulations
+                      where manual interaction is impractical or error-prone.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for pre- and post-processing tools"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Multiphysics and reactive-transport software development</h3>
+                    <p>
+                      Multiphysics interfaces for reactive-transport modeling, including coupling transport solvers with
+                      thermodynamic equilibrium calculations. Includes COMSOL-based transport models integrated with
+                      geochemical solvers for cementitious systems with complex chemistry.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for multiphysics reactive-transport software"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Open-source numerical method development</h3>
+                    <p>
+                      Contributions to open-source engineering software, including force-based finite elements and
+                      nonlinear formulations in OpenSees. Documented in peer-reviewed publications, with focus on
+                      numerical robustness and physical consistency.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for open-source numerical methods"></div>
+                </article>
+                <article class="project">
+                  <div>
+                    <h3>Verification, validation, and transparency</h3>
+                    <p>
+                      A validation-first approach: benchmark problems, sensitivity checks, and traceable assumptions
+                      so numerical results can be trusted and audited.
+                    </p>
+                  </div>
+                  <div class="figure-box"><img src="assets/images/test.jpg" alt="Illustrative figure for verification and validation"></div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="page-section">
+          <div class="container">
+            <header class="page-hero">
+              <div class="hero-about">
+                <div>
+                  <h1>About</h1>
+                  <p class="sub">Background, publications, and contact.</p>
+                  <p>
+                    PhD, PE. Background across structural analysis and design, infrastructure materials modeling,
+                    and engineering software for advanced simulation and automation.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">
+                      <a href="https://www.linkedin.com/in/vahidjafariazad/" target="_blank" rel="noopener">LinkedIn</a>
+                    </span>
+                    <span class="chip">
+                      <a href="https://scholar.google.com/citations?user=SC7Uf60AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                    </span>
+                  </div>
+                </div>
+                <img class="hero-photo" src="assets/images/main_photo.jpg" alt="Portrait of Vahid Azad">
+              </div>
+            </header>
+
+            <div class="section">
+              <h2>Professional Summary</h2>
+              <div class="prose-block">
+                <p>
+                  I take on engineering problems that need rigorous modeling, cross-domain judgment, and clear
+                  decision support—from advanced structural analysis and retrofit evaluation to durability-focused
+                  materials modeling and software tooling that improves repeatability, QA, and automation in complex
+                  simulation workflows.
+                </p>
+              </div>
+            </div>
+
+            <div class="section">
+              <h2>Selected Publications</h2>
+              <p class="section-intro">
+                Representative publications below. Full lists:
+                <a href="https://www.researchgate.net/profile/Vahid-Azad?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
+                ·
+                <a href="https://scholar.google.com/citations?user=SC7Uf60AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+              </p>
+              <ul class="pub-list">
+                <li>
+                  <a href="https://doi.org/10.1016/j.cageo.2016.04.002" target="_blank" rel="noopener">A COMSOL–GEMS interface for modeling coupled reactive-transport geochemical processes</a>
+                  <span class="pub-meta">Computers &amp; Geosciences (2016)</span>
+                </li>
+                <li>
+                  <a href="https://www.concrete.org/publications/internationalconcreteabstractsportal/m/details/id/51714466" target="_blank" rel="noopener">Extension of Powers–Brownyard model to pastes containing supplementary cementitious materials</a>
+                  <span class="pub-meta">ACI Materials Journal (2019)</span>
+                </li>
+                <li>
+                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168874X10001198" target="_blank" rel="noopener">Derivation of the consistent flexibility matrix for geometrically nonlinear Timoshenko frame finite element</a>
+                  <span class="pub-meta">Finite Elements in Analysis and Design (2010)</span>
+                </li>
+                <li>
+                  <a href="https://www.concrete.org/publications/internationalconcreteabstractsportal.aspx?m=details&ID=51689183" target="_blank" rel="noopener">A thermodynamic perspective on admixed chloride limits of concrete produced with SCMs</a>
+                  <span class="pub-meta">ACI SP‑308 (2016)</span>
+                </li>
+                <li>
+                  <a href="https://pdfs.semanticscholar.org/567a/7adf861a689511ee90a2eece4072c1f8d05a.pdf" target="_blank" rel="noopener">Numerical investigation of the role of mill scale crevices on the corrosion initiation of carbon steel reinforcement in concrete</a>
+                  <span class="pub-meta">Journal of The Electrochemical Society (2016)</span>
+                </li>
+                <li>
+                  <a href="https://onlinelibrary.wiley.com/doi/10.1002/nme.5479" target="_blank" rel="noopener">Response sensitivity of material and geometric nonlinear force-based Timoshenko frame elements</a>
+                  <span class="pub-meta">International Journal for Numerical Methods in Engineering (2017)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="section">
+              <h2>Contact</h2>
+              <p class="section-intro">Send a short note using the form below.</p>
+              <form action="https://formspree.io/f/meeljqvw" method="POST">
+                <input type="hidden" id="ts" name="ts" value="">
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required autocomplete="name" minlength="2" maxlength="80" placeholder="Your name">
+                  </div>
+                  <div class="form-field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Please enter a valid email address.">
+                  </div>
+                  <div class="form-field full">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required minlength="20" maxlength="2000" placeholder="What you are reaching out about (20+ characters)."></textarea>
+                    <button type="submit">Send message</button>
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                  </div>
+                </div>
+              </form>
+              <div class="note">
+                Messages are delivered privately via the form provider. No email address is displayed on this page.
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer class="site-footer">
@@ -121,5 +520,68 @@
       </footer>
     </div>
   </div>
+
+<script>
+  (function () {
+    const sections = ["intro", "structures", "materials", "software", "about"];
+    const navLinks = document.querySelectorAll(".side-nav a[data-section]");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    function setActive(id) {
+      navLinks.forEach(function (link) {
+        link.classList.toggle("active", link.getAttribute("data-section") === id);
+      });
+    }
+
+    // Highlight current section while scrolling
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) setActive(entry.target.id);
+          });
+        },
+        { rootMargin: "-35% 0px -50% 0px", threshold: 0.01 }
+      );
+      sections.forEach(function (id) {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    }
+
+    // Close mobile menu after choosing a section
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (mobileMenu) mobileMenu.open = false;
+      });
+    });
+
+    // Honor hash on load
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      if (sections.indexOf(id) !== -1) setActive(id);
+    } else {
+      setActive("intro");
+    }
+
+    // Contact form bot checks
+    const form = document.querySelector('form[action*="formspree"]');
+    if (form) {
+      const start = Date.now();
+      const ts = document.getElementById("ts");
+      if (ts) ts.value = String(start);
+      form.addEventListener("submit", function (e) {
+        if (!form.checkValidity()) return;
+        if (Date.now() - start < 2500) {
+          e.preventDefault();
+          alert("Please take a moment to complete the form.");
+          return;
+        }
+        const gotcha = form.querySelector('input[name="_gotcha"]');
+        if (gotcha && gotcha.value.trim() !== "") e.preventDefault();
+      });
+    }
+  })();
+</script>
 </body>
 </html>
