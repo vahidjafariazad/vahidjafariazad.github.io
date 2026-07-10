@@ -551,6 +551,55 @@ details.more p {
   border-top: 2px solid var(--accent);
 }
 
+.project.has-bg {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 11.5rem;
+  background-color: var(--bg-panel);
+  background-image:
+    linear-gradient(115deg, rgba(10, 14, 18, 0.92) 10%, rgba(12, 18, 24, 0.82) 48%, rgba(12, 18, 24, 0.62) 100%),
+    var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  border-top-color: var(--accent-warm);
+}
+
+.project.has-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio.stack .project.has-bg {
+  grid-template-columns: 1fr;
+}
+
+.project.has-bg h3 {
+  color: #fff;
+}
+
+.project.has-bg p {
+  color: rgba(247, 244, 239, 0.9);
+}
+
+.page-hero.has-bg {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 2.75rem 1.35rem;
+  background-image:
+    linear-gradient(115deg, rgba(10, 14, 18, 0.9) 5%, rgba(12, 18, 24, 0.78) 55%, rgba(12, 18, 24, 0.55) 100%),
+    var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--line);
+}
+
+.page-hero.has-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
 .portfolio.stack .project {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(140px, 220px);
