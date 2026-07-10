@@ -223,14 +223,12 @@ main {
 .spotlight .container {
   position: relative;
   z-index: 1;
+  isolation: isolate;
   min-height: min(72vh, 680px);
   display: flex;
   align-items: flex-end;
   padding: 4.5rem 1.5rem 2.75rem;
-  background:
-    linear-gradient(105deg, rgba(16, 28, 36, 0.86) 8%, rgba(20, 36, 44, 0.7) 42%, rgba(20, 36, 44, 0.42) 100%),
-    linear-gradient(180deg, rgba(240, 180, 90, 0.16) 0%, transparent 38%),
-    url("assets/images/hero-overview.png") center / cover no-repeat;
+  background-color: #121c24;
   border: 1px solid var(--line);
   border-bottom: none;
   overflow: hidden;
@@ -241,9 +239,10 @@ main {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background:
-    radial-gradient(600px 380px at 20% 80%, rgba(62, 201, 176, 0.22), transparent 60%),
-    radial-gradient(500px 320px at 90% 20%, rgba(240, 180, 90, 0.18), transparent 55%);
+    url("assets/images/hero-overview.png") right 12% bottom 8% / cover no-repeat;
+  opacity: 0.16;
   pointer-events: none;
 }
 
@@ -251,19 +250,21 @@ main {
   content: "";
   position: absolute;
   inset: auto 0 0 0;
+  z-index: 1;
   height: 2px;
   background: linear-gradient(90deg, var(--accent-warm), var(--accent), transparent 75%);
 }
 
 .spotlight-copy {
   position: relative;
-  z-index: 1;
-  max-width: 40rem;
-  padding: 1.45rem 1.5rem;
-  background: rgba(16, 28, 36, 0.58);
+  z-index: 2;
+  max-width: 42rem;
+  padding: 1.5rem 1.55rem;
+  background: rgba(10, 16, 22, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-left: 3px solid var(--accent-warm);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .spotlight .kicker {
@@ -281,15 +282,15 @@ main {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: var(--h1);
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  max-width: 13ch;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.4);
+  max-width: 18ch;
+  text-shadow: none;
 }
 
 .spotlight .lede {
   margin: 0;
-  max-width: 44ch;
+  max-width: 46ch;
   font-size: var(--text-lg);
   font-weight: 500;
   line-height: 1.58;
@@ -536,19 +537,45 @@ a.spot-link:hover {
 .page-section.has-section-bg > .container {
   position: relative;
   z-index: 1;
+  isolation: isolate;
   padding: 2rem 1.5rem 2.5rem;
-  background-color: var(--bg);
-  background-image:
-    linear-gradient(180deg, rgba(16, 28, 36, 0.72) 0%, rgba(20, 36, 44, 0.62) 45%, rgba(20, 36, 44, 0.78) 100%),
-    var(--section-bg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
+  background-color: #121c24;
   border: 1px solid var(--line);
 }
 
+.page-section.has-section-bg > .container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--section-bg);
+  background-repeat: no-repeat;
+  background-size: 58% auto;
+  background-position: right -4% bottom -6%;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.page-section.has-section-bg > .container > * {
+  position: relative;
+  z-index: 1;
+}
+
 .page-section.has-section-bg .page-hero {
-  border-bottom-color: rgba(255, 255, 255, 0.18);
+  max-width: 48rem;
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 0.35rem;
+  background: rgba(10, 16, 22, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 3px solid var(--accent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.page-section.has-section-bg .page-hero h1,
+.page-section.has-section-bg .page-hero .sub,
+.page-section.has-section-bg .page-hero p {
+  max-width: none;
 }
 
 .page-section.has-section-bg .section h2 {
@@ -556,26 +583,26 @@ a.spot-link:hover {
 }
 
 .project.on-section-bg {
-  background: rgba(10, 18, 24, 0.42);
-  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(10, 16, 22, 0.84);
+  border-color: rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
 .project.on-section-bg:hover {
-  background: rgba(10, 18, 24, 0.55);
+  background: rgba(10, 16, 22, 0.92);
   border-color: rgba(62, 201, 176, 0.35);
   transform: translateY(-2px);
 }
 
 .project.on-section-bg h3 {
   color: #fff;
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+  text-shadow: none;
 }
 
 .project.on-section-bg p {
-  color: rgba(245, 241, 234, 0.94);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  color: rgba(245, 241, 234, 0.9);
+  text-shadow: none;
 }
 
 .portfolio.stack .project.on-section-bg {
@@ -1115,16 +1142,41 @@ button[type="submit"]:hover {
   .spotlight .container {
     min-height: min(58vh, 460px);
     padding: 3.5rem 1.1rem 2rem;
-    background-position: 62% center;
+  }
+
+  .spotlight .container::before {
+    background-position: 78% 100%;
+    background-size: cover;
+    opacity: 0.14;
   }
 
   .spotlight-copy {
     max-width: none;
-    padding: 1.1rem 1.1rem;
+    padding: 1.15rem 1.15rem;
+    background: rgba(10, 16, 22, 0.9);
   }
 
   .spotlight h1 {
     max-width: none;
+  }
+
+  .page-section.has-section-bg {
+    padding-top: 1rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .page-section.has-section-bg > .container {
+    padding: 1.5rem 1.1rem 2rem;
+  }
+
+  .page-section.has-section-bg > .container::before {
+    background-size: 92% auto;
+    background-position: 110% 8%;
+    opacity: 0.12;
+  }
+
+  .page-section.has-section-bg .page-hero {
+    padding: 1rem 1.05rem;
   }
 
   .hero-actions {
@@ -1137,15 +1189,6 @@ button[type="submit"]:hover {
 
   .page-hero.has-bg {
     padding: 2rem 1.1rem;
-  }
-
-  .page-section.has-section-bg {
-    padding-top: 1rem;
-    padding-bottom: 1.75rem;
-  }
-
-  .page-section.has-section-bg > .container {
-    padding: 1.5rem 1.1rem 2rem;
   }
 
   .project,
@@ -1191,9 +1234,20 @@ button[type="submit"]:hover {
     padding: 3rem 0.95rem 1.5rem;
   }
 
+  .spotlight .container::before {
+    background-position: 85% 100%;
+    opacity: 0.12;
+  }
+
   .spotlight-copy {
     padding: 0.95rem 0.95rem;
     backdrop-filter: blur(8px);
+  }
+
+  .page-section.has-section-bg > .container::before {
+    background-size: 110% auto;
+    background-position: 120% -5%;
+    opacity: 0.1;
   }
 
   .spotlight .lede {
