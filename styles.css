@@ -269,11 +269,11 @@ main {
   z-index: 2;
   max-width: 42rem;
   padding: 1.5rem 1.55rem;
-  background: rgba(10, 16, 22, 0.58);
+  background: rgba(10, 16, 22, 0.36);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-left: 3px solid var(--accent-warm);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .spotlight .kicker {
@@ -393,8 +393,8 @@ main {
 }
 
 .page-hero .hero-photo {
-  width: 132px;
-  height: 132px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border: 1px solid var(--line);
 }
@@ -1141,8 +1141,8 @@ button[type="submit"]:hover {
   }
 
   .page-hero .hero-photo {
-    width: 112px;
-    height: 112px;
+    width: 168px;
+    height: 168px;
   }
 
   .container {
