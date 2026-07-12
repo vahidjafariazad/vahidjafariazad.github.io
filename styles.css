@@ -1,16 +1,16 @@
-﻿/* Hyperspace-inspired layout ┬╖ warmer teal + lively type */
+﻿/* Hyperspace-inspired layout · steel blue + warm gold */
 :root {
   --sidebar-w: 17.5rem;
-  --bg: #14242c;
-  --bg-panel: #1c303a;
-  --bg-elev: #25404c;
+  --bg: #121c28;
+  --bg-panel: #1a2636;
+  --bg-elev: #243448;
   --ink: #f5f1ea;
   --muted: rgba(245, 241, 234, 0.78);
   --line: rgba(255, 255, 255, 0.14);
-  --accent: #3ec9b0;
-  --accent-strong: #2aaf97;
+  --accent: #6b9fd8;
+  --accent-strong: #4f87c4;
   --accent-warm: #f0b45a;
-  --accent-soft: rgba(62, 201, 176, 0.16);
+  --accent-soft: rgba(107, 159, 216, 0.16);
   --maxw: 1280px;
   --font-display: "Syne", system-ui, sans-serif;
   --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
@@ -46,17 +46,17 @@ body {
   color: var(--ink);
   background:
     radial-gradient(1000px 560px at 92% -8%, rgba(240, 180, 90, 0.16), transparent 52%),
-    radial-gradient(860px 520px at -8% 28%, rgba(62, 201, 176, 0.14), transparent 55%),
-    radial-gradient(700px 420px at 70% 85%, rgba(62, 201, 176, 0.07), transparent 60%),
+    radial-gradient(860px 520px at -8% 28%, rgba(107, 159, 216, 0.14), transparent 55%),
+    radial-gradient(700px 420px at 70% 85%, rgba(107, 159, 216, 0.07), transparent 60%),
     var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: clip;
-  -webkit-tap-highlight-color: rgba(62, 201, 176, 0.28);
+  -webkit-tap-highlight-color: rgba(107, 159, 216, 0.28);
 }
 
 ::selection {
-  background: rgba(62, 201, 176, 0.35);
+  background: rgba(107, 159, 216, 0.35);
   color: #fff;
 }
 
@@ -115,7 +115,7 @@ textarea:focus-visible {
   justify-content: space-between;
   padding: 2.25rem 1.6rem 1.75rem;
   background:
-    linear-gradient(165deg, rgba(62, 201, 176, 0.28) 0%, transparent 48%),
+    linear-gradient(165deg, rgba(107, 159, 216, 0.28) 0%, transparent 48%),
     linear-gradient(210deg, rgba(240, 180, 90, 0.16) 0%, transparent 42%),
     linear-gradient(180deg, #1a303a 0%, #101c24 100%);
   border-right: 1px solid var(--line);
@@ -454,7 +454,7 @@ main {
 
 .spot:hover {
   background: var(--bg-elev);
-  border-color: rgba(62, 201, 176, 0.45);
+  border-color: rgba(107, 159, 216, 0.45);
   transform: translateY(-1px);
 }
 
@@ -609,7 +609,7 @@ a.spot-link:hover {
 
 .project.on-section-bg:hover {
   background: rgba(14, 22, 30, 0.72);
-  border-color: rgba(62, 201, 176, 0.35);
+  border-color: rgba(107, 159, 216, 0.35);
   transform: translateY(-2px);
 }
 
